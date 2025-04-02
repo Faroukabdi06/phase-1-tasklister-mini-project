@@ -17,6 +17,12 @@ function todo(formText){
   let liItem = document.createElement('li');
   liItem.textContent = 'Wash the dishes';
   taskList.prepend(liItem);
+  let button = document.createElement('button');
+  button.textContent='delete'
+  taskList.append(button);
+  button.addEventListener('click',()=>{
+    liItem.remove();
+  })
 
 }
 todo();
