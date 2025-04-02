@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", (e) => {
   // e.preventDefault()
-  let formInput = document.querySelector('#create-task-form')
+  let form = document.querySelector('#create-task-form')
   // console.log(formInput);
-  let formText = formInput[0]
+  let formText = form[0]
   // console.log(formText);
-  formInput.addEventListener('submit', (e)=>{
+  form.addEventListener('submit', (e)=>{
     e.preventDefault()
     todo(formText.value)
-    formInput.reset()
+    form.reset()
   })
 });
 
 function todo(formText){
-  let myTodos =document.querySelector('#list #tasks')
-  console.log(myTodos);
+  let taskList =document.querySelector('#list #tasks')
+  console.log(taskList);
   let liItem = document.createElement('li');
-  liItem.textContent = formText;
-  myTodos.prepend(liItem);
+  liItem.textContent = 'Wash the dishes';
+  taskList.prepend(liItem);
 
 }
 todo();
